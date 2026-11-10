@@ -1,0 +1,26 @@
+{
+  "name": "pack-fix",
+  "version": "1.0.0",
+  "description": "Find orphaned stuff on yote and the cell — adopt it or clean it.",
+  "main": "bin/orphan-sweep.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot run bin/orphan-sweep.ts",
+    "test": "bun test",
+    "typecheck": "tsgo --noEmit -p tsconfig.json",
+    "lint": "biome check .",
+    "fmt": "biome format --write .",
+    "build": "bun build bin/*.ts --outdir dist"
+  },
+  "bin": {
+    "orphan-sweep": "bin/orphan-sweep.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun-types": "latest",
+    "typescript": "^5.3.3",
+    "@biomejs/biome": "^1.8.0"
+  },
+  "license": "MIT",
+  "private": true
+}
